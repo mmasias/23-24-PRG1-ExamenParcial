@@ -115,7 +115,7 @@ Día 4 - 10:00h
 Agregue un ascensor al edificio, el cual se mueve -de planta en planta, subiendo o bajando- cada 15 minutos. 
 
 ```
-Día 4 - 10:00h
+Día 4 - 10:15h
 > Un rayo ha inutilizado la columna 2 del edificio
 > La planta 3 está en mantenimiento
 > Ascensor en la planta 5
