@@ -15,6 +15,8 @@ Desde el frontis del edificio se ven únicamente las ventanas. Y si la ventana e
 Simule una semana en la vida de este edificio. Muestre el mismo mediante texto [ASCII](https://es.wikipedia.org/wiki/ASCII)
 
 ```
+Día 7 - 13:00h
+
               __/\__
    |   |   |  |####|  |   |   |
 +--------------------------------+
@@ -56,7 +58,76 @@ Promedio - 37.5 horas
 
 ### Lluvia
 
+Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece todo ese día inutilizada hasta que es reparada.
+
+```
+Día 4 - 10:00h
+> Un rayo ha inutilizado la columna 2 del edificio
+
+              __/\__
+   |   /   |  |####|  |   |   |
++--------------------------------+
+| [ ].[X].[*].[    ].[ ].[*].[*] |
+| [o].[X].[*].[    ].[*].[o].[o] |
+| [*].[X].[o].[    ].[*].[ ].[ ] |
+| [o].[X].[ ].[    ].[o].[o].[ ] |
+| [o].[X].[o].[    ].[*].[o].[ ] |
+| [*].[X].[o].[    ].[*].[*].[ ] |
+| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
+|__[       ]__|[][]|__[       ]__|
+
+[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
+[#] -> En mantenimiento / [X] -> Inutilizada
+
+```
+
 ### Mantenimiento
+
+Algunos días, hay plantas que entran en mantenimiento.
+
+```
+Día 4 - 10:00h
+> Un rayo ha inutilizado la columna 2 del edificio
+> La planta 3 está en mantenimiento
+
+              __/\__
+   |   /   |  |####|  |   |   |
++--------------------------------+
+| [ ].[X].[*].[    ].[ ].[*].[*] |
+| [o].[X].[*].[    ].[*].[o].[o] |
+| [*].[X].[o].[    ].[*].[ ].[ ] |
+| [o].[X].[ ].[    ].[o].[o].[ ] |
+| [#].[#].[#].[    ].[#].[#].[#] |
+| [*].[X].[o].[    ].[*].[*].[ ] |
+| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
+|__[       ]__|[][]|__[       ]__|
+
+[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
+[#] -> En mantenimiento / [X] -> Inutilizada
+```
 
 ### Ascensor
 
+Agregue un ascensor al edificio, el cual se mueve -de planta en planta, subiendo o bajando- cada 15 minutos. 
+
+```
+Día 4 - 10:00h
+> Un rayo ha inutilizado la columna 2 del edificio
+> La planta 3 está en mantenimiento
+> Ascensor en la planta 5
+
+              __/\__
+   |   /   |  |####|  |   |   |
++--------------------------------+
+| [ ].[X].[*].[    ].[ ].[*].[*] |
+| [o].[X].[*].[    ].[*].[o].[o] |
+| [*].[X].[o].[====].[*].[ ].[ ] |
+| [o].[X].[ ].[    ].[o].[o].[ ] |
+| [#].[#].[#].[    ].[#].[#].[#] |
+| [*].[X].[o].[    ].[*].[*].[ ] |
+| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
+|__[       ]__|[][]|__[       ]__|
+
+[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
+[#] -> En mantenimiento / [X] -> Inutilizada
+```
