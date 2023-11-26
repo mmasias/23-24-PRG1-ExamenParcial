@@ -2,7 +2,7 @@
 
 # Un edificio
 
-En la calle de la Agonía existe un edificio que tiene 7 plantas. En cada planta (a partir de la primera planta), hay 6 habitaciones. La planta baja tiene la recepción, y por tanto no tiene ventanas: al lado izquierdo se encuentra el comedor y al lado derecho se encuentra un salón de actos.
+En la esquina de las calles Agonía con Mortificación hay un hotel con 8 plantas. En cada planta (a partir de la primera y hasta la séptima), hay 6 habitaciones. La planta baja tiene las áreas comunes, por lo que carece de ventanas: está la recepción al centro, al lado izquierdo se encuentra el comedor y al lado derecho se encuentra un salón de actos.
 
 Cada habitación tiene persianas que cierran por completo la visibilidad de la habitación hacia el exterior. La probabilidad de encontrar la persiana abierta se ha estimado en 70% para cada hora.
 
@@ -12,26 +12,45 @@ Desde el frontis del edificio se ven únicamente las ventanas. Y si la ventana e
 
 ## Reto base
 
-Simule una semana en la vida de este edificio. Muestre el mismo mediante gráficos ASCII
+Simule una semana en la vida de este edificio. Muestre el mismo mediante texto [ASCII](https://es.wikipedia.org/wiki/ASCII)
 
 ```
               __/\__
    |   |   |  |####|  |   |   |
 +--------------------------------+
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
+| [ ].[ ].[*].[    ].[ ].[*].[*] |
+| [o].[ ].[*].[    ].[*].[o].[o] |
+| [*].[ ].[o].[    ].[*].[ ].[ ] |
+| [o].[*].[ ].[    ].[o].[o].[ ] |
+| [o].[ ].[o].[    ].[*].[o].[ ] |
+| [*].[ ].[o].[    ].[*].[*].[ ] |
 | [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
 |__[       ]__|[][]|__[       ]__|
+
+[ ] -> Ventana cerrada / [o] -> Luz apagada / [*] -> Luz encendida 
 
 ```
 
 ### Estadísticas
 
-A la gerencia del edificio le interesa hacer un seguimiento del gasto de electricidad. Para esto, un indicador interesante puede ser el número de horas que las habitaciones tienen encendida la luz: brinde el dato a la gerencia, indicando por cada día cuántas horas/habitacion se han consumido. Asimismo, indique el dato promedio de la semana.
+A la gerencia del edificio le interesa hacer un seguimiento del gasto de electricidad de sus clientes. Para esto, un indicador interesante puede ser el número de horas que las habitaciones tienen la luz encendida: brinde el dato a la gerencia, indicando por cada día cuántas horas han tenido encendida la luz las habitaciones. Asimismo, indique el dato promedio de la semana (promedio también por día).
+
+Esto es, al final de la simulación semanal, presente un esquema similar al siguiente:
+
+```
+
+Dia 1    - 45.0 horas
+Dia 2    - 56.0 horas
+Dia 3    - 30.0 horas
+Dia 4    - 30.0 horas
+Dia 5    - 30.0 horas
+Dia 6    - 30.0 horas
+Dia 7    - 30.0 horas
+=====================
+Promedio - 37.5 horas
+---------------------
+
+```
 
 ## Retos extendidos
 
