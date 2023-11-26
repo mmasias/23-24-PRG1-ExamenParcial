@@ -14,12 +14,15 @@ Desde el frontis del edificio se ven únicamente las ventanas. Y si la ventana e
 
 Simule una semana en la vida de este edificio. Muestre el mismo mediante texto [ASCII](https://es.wikipedia.org/wiki/ASCII)
 
+
+### Sugerencia de presentación
+
 ```
 Día 7 - 13:00h
 
               __/\__
    |   |   |  |####|  |   |   |
-+--------------------------------+
++================================+
 | [ ].[ ].[*].[    ].[ ].[*].[*] |
 | [o].[ ].[*].[    ].[*].[o].[o] |
 | [*].[ ].[o].[    ].[*].[ ].[ ] |
@@ -27,7 +30,7 @@ Día 7 - 13:00h
 | [o].[ ].[o].[    ].[*].[o].[ ] |
 | [*].[ ].[o].[    ].[*].[*].[ ] |
 | [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-|__[       ]__|[][]|__[       ]__|
+|__[_______]__|[][]|__[_______]__|
 
 [ ] -> Ventana cerrada / [o] -> Luz apagada / [*] -> Luz encendida 
 
@@ -40,17 +43,18 @@ A la gerencia del edificio le interesa hacer un seguimiento del gasto de electri
 Esto es, al final de la simulación semanal, presente un esquema similar al siguiente:
 
 ```
-
-Dia 1    - 45.0 horas
-Dia 2    - 56.0 horas
-Dia 3    - 30.0 horas
-Dia 4    - 30.0 horas
-Dia 5    - 30.0 horas
-Dia 6    - 30.0 horas
-Dia 7    - 30.0 horas
-=====================
+ESTADISTICAS SEMANALES
+======================
+Dia 1 - 45 horas
+Dia 2 - 56 horas
+Dia 3 - 30 horas
+Dia 4 - 30 horas
+Dia 5 - 30 horas
+Dia 6 - 30 horas
+Dia 7 - 30 horas
+======================
 Promedio - 37.5 horas
----------------------
+----------------------
 
 ```
 
@@ -66,7 +70,7 @@ Día 4 - 10:00h
 
               __/\__
    |   /   |  |####|  |   |   |
-+--------------------------------+
++================================+
 | [ ].[X].[*].[    ].[ ].[*].[*] |
 | [o].[X].[*].[    ].[*].[o].[o] |
 | [*].[X].[o].[    ].[*].[ ].[ ] |
@@ -74,7 +78,7 @@ Día 4 - 10:00h
 | [o].[X].[o].[    ].[*].[o].[ ] |
 | [*].[X].[o].[    ].[*].[*].[ ] |
 | [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[       ]__|[][]|__[       ]__|
+|__[_______]__|[][]|__[_______]__|
 
 [ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
 [#] -> En mantenimiento / [X] -> Inutilizada
@@ -92,7 +96,7 @@ Día 4 - 10:00h
 
               __/\__
    |   /   |  |####|  |   |   |
-+--------------------------------+
++================================+
 | [ ].[X].[*].[    ].[ ].[*].[*] |
 | [o].[X].[*].[    ].[*].[o].[o] |
 | [*].[X].[o].[    ].[*].[ ].[ ] |
@@ -100,7 +104,7 @@ Día 4 - 10:00h
 | [#].[#].[#].[    ].[#].[#].[#] |
 | [*].[X].[o].[    ].[*].[*].[ ] |
 | [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[       ]__|[][]|__[       ]__|
+|__[_______]__|[][]|__[_______]__|
 
 [ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
 [#] -> En mantenimiento / [X] -> Inutilizada
@@ -126,7 +130,7 @@ Día 4 - 10:00h
 | [#].[#].[#].[    ].[#].[#].[#] |
 | [*].[X].[o].[    ].[*].[*].[ ] |
 | [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[       ]__|[][]|__[       ]__|
+|__[_______]__|[][]|__[_______]__|
 
 [ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
 [#] -> En mantenimiento / [X] -> Inutilizada
