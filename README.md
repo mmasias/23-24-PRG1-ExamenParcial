@@ -18,120 +18,105 @@ Simule una semana en la vida de este edificio. Muestre el mismo mediante texto [
 ### Sugerencia de presentación
 
 ```
-Día 7 - 13:00h
+               __/\__
+  |    |    |  |####|  |    |    |  
+====================================
+:[*]::[*]::[º]:[    ]:[ ]::[ ]::[º]: - P7
+:[*]::[ ]::[ ]:[    ]:[º]::[*]::[*]: - P6
+:[*]::[º]::[ ]:[    ]:[º]::[ ]::[ ]: - P5
+:[*]::[*]::[ ]:[    ]:[*]::[º]::[º]: - P4
+:[ ]::[º]::[*]:[    ]:[ ]::[*]::[*]: - P3
+:[º]::[º]::[º]:[    ]:[º]::[ ]::[*]: - P2
+:[º]::[*]::[º]:[    ]:[ ]::[*]::[º]: - P1
+------------------------------------
+     ==========================
+   ==============================
+ ==================================
 
-              __/\__
-   |   |   |  |####|  |   |   |
-+================================+
-| [ ].[ ].[*].[    ].[ ].[*].[*] |
-| [o].[ ].[*].[    ].[*].[o].[o] |
-| [*].[ ].[o].[    ].[*].[ ].[ ] |
-| [o].[*].[ ].[    ].[o].[o].[ ] |
-| [o].[ ].[o].[    ].[*].[o].[ ] |
-| [*].[ ].[o].[    ].[*].[*].[ ] |
-| [ ].[ ].[ ].[    ].[ ].[ ].[ ] |
-|__[_______]__|[][]|__[_______]__|
-
-[ ] -> Ventana cerrada / [o] -> Luz apagada / [*] -> Luz encendida 
-
+Dia 1 - 1:00h 
 ```
+<div align=center>
 
-### Estadísticas
+|Ventana cerrada|Luz apagada|Luz encendida|
+|:-:|:-:|:-:|
+`[ ]`|`[º]`|`[*]`
 
-A la gerencia del edificio le interesa hacer un seguimiento del gasto de electricidad de sus clientes. Para esto, un indicador interesante puede ser el número de horas que las habitaciones tienen la luz encendida: brinde el dato a la gerencia, indicando por cada día cuántas horas han tenido encendida la luz las habitaciones. Asimismo, indique el dato promedio de la semana (promedio también por día).
-
-Esto es, al final de la simulación semanal, presente un esquema similar al siguiente:
-
-```
-ESTADISTICAS SEMANALES
-======================
-Dia 1 - 45 horas
-Dia 2 - 56 horas
-Dia 3 - 30 horas
-Dia 4 - 30 horas
-Dia 5 - 30 horas
-Dia 6 - 30 horas
-Dia 7 - 30 horas
-======================
-Promedio - 37.5 horas
-----------------------
-
-```
+</div>
 
 ## Retos extendidos
 
+### Estadísticas
+
+A la gerencia del edificio le interesa hacer un seguimiento del gasto de electricidad de sus clientes. Para esto, un indicador interesante puede ser el número de horas que las habitaciones tienen la luz encendida: brinde el dato a la gerencia, indicando por cada hora cuántas ventanas han tenido encendida la luz las habitaciones. 
+
+Asimismo, al final del día, indique el dato total consumido del día.
+
+```
+               __/\__
+  |    |    |  |####|  |    |    |  
+====================================
+:[*]::[*]::[º]:[    ]:[ ]::[ ]::[º]: - P7
+:[*]::[ ]::[ ]:[    ]:[º]::[*]::[*]: - P6
+:[*]::[º]::[ ]:[    ]:[º]::[ ]::[ ]: - P5
+:[*]::[*]::[ ]:[    ]:[*]::[º]::[º]: - P4
+:[ ]::[º]::[*]:[    ]:[ ]::[*]::[*]: - P3
+:[º]::[º]::[º]:[    ]:[º]::[ ]::[*]: - P2
+:[º]::[*]::[º]:[    ]:[ ]::[*]::[º]: - P1
+------------------------------------
+     ==========================
+   ==============================
+ ==================================
+
+Dia 4 - 1:00h Consumo hora: 22
+CONSUMOS: D1: 612 | D2: 652 | D3: 604 
+```
+
+Al final de la simulación, presente un esquema general similar al siguiente:
+
+```
+
+CONSUMOS: D1: 612 | D2: 652 | D3: 604 | D4: 664 | D5: 626 | D6: 631 | D7: 613 | 
+
+Media de consumo semanal: 628
+
+```
+
 ### Lluvia
 
-Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece todo ese día inutilizada hasta que es reparada.
-
-```
-Día 4 - 10:00h
-> Un rayo ha inutilizado la columna 2 del edificio
-
-              __/\__
-   |   /   |  |####|  |   |   |
-+================================+
-| [ ].[X].[*].[    ].[ ].[*].[*] |
-| [o].[X].[*].[    ].[*].[o].[o] |
-| [*].[X].[o].[    ].[*].[ ].[ ] |
-| [o].[X].[ ].[    ].[o].[o].[ ] |
-| [o].[X].[o].[    ].[*].[o].[ ] |
-| [*].[X].[o].[    ].[*].[*].[ ] |
-| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[_______]__|[][]|__[_______]__|
-
-[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
-[#] -> En mantenimiento / [X] -> Inutilizada
-
-```
+Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece sin luz (y con las ventanas cerradas) lo que resta de ese día.
 
 ### Mantenimiento
 
 Algunos días, hay plantas que entran en mantenimiento.
 
 ```
-Día 4 - 10:00h
-> Un rayo ha inutilizado la columna 2 del edificio
-> La planta 3 está en mantenimiento
+               __/\__
+  |    |    |  |####|  |    |    |  
+====================================
+:[º]::[*]::[X]:[    ]:[º]::[*]::[º]: - P7
+:[º]::[º]::[X]:[    ]:[ ]::[ ]::[º]: - P6
+:[*]::[*]::[X]:[    ]:[*]::[*]::[ ]: - P5
+:[º]::[ ]::[X]:[    ]:[ ]::[*]::[*]: - P4
+:[#]::[#]::[X]:[    ]:[#]::[#]::[#]: - P3
+:[º]::[ ]::[X]:[    ]:[ ]::[*]::[*]: - P2
+:[*]::[ ]::[X]:[    ]:[*]::[º]::[*]: - P1
+------------------------------------
+     ==========================
+   ==============================
+ ==================================
 
-              __/\__
-   |   /   |  |####|  |   |   |
-+================================+
-| [ ].[X].[*].[    ].[ ].[*].[*] |
-| [o].[X].[*].[    ].[*].[o].[o] |
-| [*].[X].[o].[    ].[*].[ ].[ ] |
-| [o].[X].[ ].[    ].[o].[o].[ ] |
-| [#].[#].[#].[    ].[#].[#].[#] |
-| [*].[X].[o].[    ].[*].[*].[ ] |
-| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[_______]__|[][]|__[_______]__|
-
-[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
-[#] -> En mantenimiento / [X] -> Inutilizada
-```
-
-### Ascensor
-
-Agregue un ascensor al edificio, el cual se mueve -de planta en planta, subiendo o bajando- cada 15 minutos. 
+Dia 2 - 8:00h Consumo hora: 28
+Un rayo ha inutilizado la columna 3
+3º planta en mantenimiento
+CONSUMOS: D1: 611 | 
 
 ```
-Día 4 - 10:15h
-> Un rayo ha inutilizado la columna 2 del edificio
-> La planta 3 está en mantenimiento
-> Ascensor en la planta 5
 
-              __/\__
-   |   /   |  |####|  |   |   |
-+--------------------------------+
-| [ ].[X].[*].[    ].[ ].[*].[*] |
-| [o].[X].[*].[    ].[*].[o].[o] |
-| [*].[X].[o].[====].[*].[ ].[ ] |
-| [o].[X].[ ].[    ].[o].[o].[ ] |
-| [#].[#].[#].[    ].[#].[#].[#] |
-| [*].[X].[o].[    ].[*].[*].[ ] |
-| [ ].[X].[ ].[    ].[ ].[ ].[ ] |
-|__[_______]__|[][]|__[_______]__|
+<div align=center>
 
-[ ] -> Ventana cerrada  / [o] -> Luz apagada / [*] -> Luz encendida 
-[#] -> En mantenimiento / [X] -> Inutilizada
-```
+|Ventana cerrada|Luz apagada|Luz encendida|Avería|Mantenimiento
+|:-:|:-:|:-:|:-:|:-:|
+`[ ]`|`[º]`|`[*]`|`[X]`|`[#]`
+
+</div>
+
