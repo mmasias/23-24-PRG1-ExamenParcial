@@ -86,7 +86,7 @@ Media de consumo semanal: 628
 |Lluvia|Mantenimiento|
 |-|-|
 Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece averiada lo que resta de ese día.|Algunos días, hay plantas que entran en mantenimiento.
-La probabilidad de caida de un rayo sobre una columna es del 20%|Aunque todas las plantas requieren mantenimiento, la probabilidad diaria que llegue el departamento de mantenimiento es del 5%
+La probabilidad (por hora) de caida de un rayo sobre una columna es del 20%. En un día, solo puede caer un rayo|Aunque todas las plantas requieren mantenimiento, la probabilidad diaria que llegue el departamento de mantenimiento es del 5%. Y, al igual que con los rayos, solo una planta entra en mantenimiento por día.
 
 ```
                __/\__
