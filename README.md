@@ -2,7 +2,7 @@
 
 # Un edificio
 
-En la esquina de las calles Agonía con Mortificación hay un hotel con 8 plantas. En cada planta (a partir de la primera y hasta la séptima), hay 6 habitaciones. La planta baja tiene las áreas comunes, por lo que carece de ventanas: está la recepción al centro, al lado izquierdo se encuentra el comedor y al lado derecho se encuentra un salón de actos.
+En la esquina de las calles *Agonía* con *Mortificación* hay un hotel con 8 plantas. En cada planta (a partir de la primera y hasta la séptima), hay 6 habitaciones. La planta baja tiene las áreas comunes, por lo que carece de ventanas: está la recepción al centro, al lado izquierdo se encuentra el comedor y al lado derecho se encuentra un salón de actos.
 
 Cada habitación tiene persianas que cierran por completo la visibilidad de la habitación hacia el exterior. La probabilidad de encontrar la persiana abierta se ha estimado en 70% para cada hora.
 
@@ -81,13 +81,12 @@ Media de consumo semanal: 628
 
 ```
 
-### Lluvia
+### Otras ocurrencias
 
-Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece sin luz (y con las ventanas cerradas) lo que resta de ese día.
-
-### Mantenimiento
-
-Algunos días, hay plantas que entran en mantenimiento.
+|Lluvia|Mantenimiento|
+|-|-|
+Algunos días llueve. Y cuando llueve, puede caer un rayo en alguno de los seis pararayos que tiene el edificio sobre su azotea. Al caer el rayo, inutiliza la electricidad de toda la columna sobre la que cae, la cual permanece averiada lo que resta de ese día.|Algunos días, hay plantas que entran en mantenimiento.
+La probabilidad de caida de un rayo sobre una columna es del 20%|Aunque todas las plantas requieren mantenimiento, la probabilidad diaria que llegue el departamento de mantenimiento es del 5%
 
 ```
                __/\__
@@ -95,9 +94,9 @@ Algunos días, hay plantas que entran en mantenimiento.
 ====================================
 :[º]::[*]::[X]:[    ]:[º]::[*]::[º]: - P7
 :[º]::[º]::[X]:[    ]:[ ]::[ ]::[º]: - P6
-:[*]::[*]::[X]:[    ]:[*]::[*]::[ ]: - P5
-:[º]::[ ]::[X]:[    ]:[ ]::[*]::[*]: - P4
-:[#]::[#]::[X]:[    ]:[#]::[#]::[#]: - P3
+:[#]::[#]::[X]:[    ]:[#]::[#]::[#]: - P5
+:[*]::[*]::[X]:[    ]:[*]::[*]::[ ]: - P4
+:[º]::[ ]::[X]:[    ]:[ ]::[*]::[*]: - P3
 :[º]::[ ]::[X]:[    ]:[ ]::[*]::[*]: - P2
 :[*]::[ ]::[X]:[    ]:[*]::[º]::[*]: - P1
 ------------------------------------
@@ -107,7 +106,7 @@ Algunos días, hay plantas que entran en mantenimiento.
 
 Dia 2 - 8:00h Consumo hora: 28
 Un rayo ha inutilizado la columna 3
-3º planta en mantenimiento
+5º planta en mantenimiento
 CONSUMOS: D1: 611 | 
 
 ```
