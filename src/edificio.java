@@ -6,30 +6,52 @@ public class edificio {
     private static final double PROB_BLIND_OPEN = 0.7;
     private static final double PROB_LIGHT_ON = 0.6;
     private static Random random = new Random();
+    private static int[] dailyConsumption = new int[DAYS];
 
     public static void main(String[] args) {
-        for (int day = 1; day <= DAYS; day++) {
-            for (int hour = 1; hour <= HOURS_PER_DAY; hour++) {
-                simulateHour(day, hour);
+        int weeklyConsumption = 0;
+
+        for (int day = 0; day < DAYS; day++) {
+            for (int hour = 0; hour < HOURS_PER_DAY; hour++) {
+                int hourlyConsumption = simulateHour(day, hour);
+                dailyConsumption[day] += hourlyConsumption;
+                System.out.println(" ");
+                System.out.println("Dia " + (day + 1) + " - " + (hour + 1) + ":00h Consumo hora: " + hourlyConsumption);
+                System.out.println(" ");
             }
+            weeklyConsumption += dailyConsumption[day];
+            System.out.println("CONSUMOS: ");
+            for (int d = 0; d <= day; d++) {
+                System.out.print("D" + (d + 1) + ": " + dailyConsumption[d] + " | ");
+            }
+            System.out.println("\n");
         }
+
+        System.out.println("CONSUMOS TOTALES: ");
+        for (int d = 0; d < DAYS; d++) {
+            System.out.print("D" + (d + 1) + ": " + dailyConsumption[d] + " | ");
+        }
+        System.out.println(" ");
+        System.out.println("\nMedia de consumo semanal: " + (weeklyConsumption / DAYS));
     }
 
-    private static void simulateHour(int day, int hour) {
+    private static int simulateHour(int day, int hour) {
         String[][] building = new String[7][7];
+        int lightCount = 0;
+
         for (int floor = 0; floor < building.length; floor++) {
-            for (int room = 0; room < 3; room++) { 
+            for (int room = 0; room < 3; room++) {
                 building[floor][room] = simulateRoom();
+                if (building[floor][room].equals(":[*]:")) lightCount++;
             }
-            building[floor][3] = "[    ]"; 
-            for (int room = 4; room < 7; room++) { 
+            building[floor][3] = "[    ]";
+            for (int room = 4; room < 7; room++) {
                 building[floor][room] = simulateRoom();
+                if (building[floor][room].equals(":[*]:")) lightCount++;
             }
         }
-        System.out.println(" ");               
         printBuilding(building);
-        System.out.println(" "); 
-        System.out.println("Dia " + day + " - " + hour + ":00h");
+        return lightCount;
     }
 
     private static String simulateRoom() {
@@ -56,6 +78,5 @@ public class edificio {
         System.out.println("     ==========================");
         System.out.println("   ==============================");
         System.out.println(" ==================================");
-        
     }
 }
