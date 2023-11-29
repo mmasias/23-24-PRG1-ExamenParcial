@@ -18,22 +18,27 @@ public class edificio {
     private static void simulateHour(int day, int hour) {
         String[][] building = new String[7][7];
         for (int floor = 0; floor < building.length; floor++) {
-            for (int room = 0; room < building[floor].length; room++) {
+            for (int room = 0; room < 3; room++) { 
                 building[floor][room] = simulateRoom();
             }
-        }               
+            building[floor][3] = "[    ]"; 
+            for (int room = 4; room < 7; room++) { 
+                building[floor][room] = simulateRoom();
+            }
+        }
+        System.out.println(" ");               
         printBuilding(building);
-        System.out.println(" ");
-        System.out.println("Dia " + day + " - " + hour + ":00h");      
+        System.out.println(" "); 
+        System.out.println("Dia " + day + " - " + hour + ":00h");
     }
 
     private static String simulateRoom() {
         boolean blindOpen = random.nextDouble() < PROB_BLIND_OPEN;
         boolean lightOn = random.nextDouble() < PROB_LIGHT_ON;
         if (blindOpen) {
-            return "[ ]";
+            return ":[ ]:";
         } else {
-            return lightOn ? "[*]" : "[º]";
+            return lightOn ? ":[*]:" : ":[º]:";
         }
     }
 
@@ -43,7 +48,7 @@ public class edificio {
         System.out.println("====================================");
         for (int i = building.length - 1; i >= 0; i--) {
             for (int j = 0; j < building[i].length; j++) {
-                System.out.print(building[i][j] + "::");
+                System.out.print(building[i][j]);
             }
             System.out.println(" - P" + (i + 1));
         }
@@ -51,5 +56,6 @@ public class edificio {
         System.out.println("     ==========================");
         System.out.println("   ==============================");
         System.out.println(" ==================================");
+        
     }
 }
