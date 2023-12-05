@@ -10,8 +10,10 @@ class ParcialMejorado {
 
         for (int dia = 1; dia <= 7; dia ++){
             
-            final int PROBABILIDAD_MANTENIMIENTO = 50;
+            final int PROBABILIDAD_MANTENIMIENTO = 5;
+            final int PROBABILIDAD_RAYO = 20;
             int plantaMantenimiento = 0;
+            int columnaRayo = 0;
             boolean hayMantenimiento = calculoProbabilidad(PROBABILIDAD_MANTENIMIENTO);
 
             if (hayMantenimiento){
@@ -24,26 +26,40 @@ class ParcialMejorado {
             
                 int consumoHora = 0;
                 impresionTecho();
+                boolean caeRayo = calculoProbabilidad(PROBABILIDAD_RAYO);
                 
+                boolean yaCaido = columnaRayo > 0;
+
+                if (caeRayo && !yaCaido){
+                    columnaRayo = numeroAleatorio(1, 7);
+                }
+
                 for (int planta = 7; planta >= 1; planta--){
                     for (int ventana = 1; ventana <= 7; ventana++){
+
                         if (ventana == 4){
                             System.out.print("[    ]");
                         } else if (planta == plantaMantenimiento){
                             System.out.print(":[#]:");
-                        }  else {
-                        consumoHora += ventanas();
+                        } else if (ventana == columnaRayo){
+                            System.out.print(":[X]:");
+                        } else {
+                        consumoHora += ventanasSinProblemas();
                         }
+
                     }
+
                     System.out.println();
+                
                 }
             
                 impresionBajos();
+
                 System.out.println("Dia " + dia + " - " + hora + ":00h Consumo hora: " + consumoHora);
                 
                 consumoDia += consumoHora;
                 System.out.println(salida);
-                scanner.nextLine();
+                pausa(1);
                 limpiarPantalla();
         }
         consumoSemana += consumoDia;
@@ -53,7 +69,7 @@ class ParcialMejorado {
     System.out.println("Media consumo semanal: " + (consumoSemana/7));
 }
 
-    static int ventanas() {
+    static int ventanasSinProblemas() {
         
         final int PROBABILIDAD_VENTANA_ABIERTA = 70;
         final int PROBABILIDAD_LUZ_ENCENDIDA = 60;
