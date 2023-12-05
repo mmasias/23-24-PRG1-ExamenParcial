@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.sound.midi.Soundbank;
 class ParcialMejorado {
     public static void main(String[] args) {
 
@@ -12,8 +10,10 @@ class ParcialMejorado {
             
             final int PROBABILIDAD_MANTENIMIENTO = 5;
             final int PROBABILIDAD_RAYO = 20;
+
             int plantaMantenimiento = 0;
             int columnaRayo = 0;
+          
             boolean hayMantenimiento = calculoProbabilidad(PROBABILIDAD_MANTENIMIENTO);
 
             if (hayMantenimiento){
@@ -25,14 +25,16 @@ class ParcialMejorado {
             for (int hora = 0; hora <=23; hora++){
             
                 int consumoHora = 0;
-                impresionTecho();
-                boolean caeRayo = calculoProbabilidad(PROBABILIDAD_RAYO);
                 
+                boolean caeRayo = calculoProbabilidad(PROBABILIDAD_RAYO);
                 boolean yaCaido = columnaRayo > 0;
-
+                
+                
                 if (caeRayo && !yaCaido){
                     columnaRayo = numeroAleatorio(1, 7);
                 }
+                
+                impresionTecho();
 
                 for (int planta = 7; planta >= 1; planta--){
                     for (int ventana = 1; ventana <= 7; ventana++){
@@ -44,12 +46,12 @@ class ParcialMejorado {
                         } else if (ventana == columnaRayo){
                             System.out.print(":[X]:");
                         } else {
-                        consumoHora += ventanasSinProblemas();
+                        consumoHora += ventanaSinProblemas();
                         }
 
                     }
 
-                    System.out.println();
+                    System.out.println(" - P" + planta);
                 
                 }
             
@@ -69,7 +71,7 @@ class ParcialMejorado {
     System.out.println("Media consumo semanal: " + (consumoSemana/7));
 }
 
-    static int ventanasSinProblemas() {
+    static int ventanaSinProblemas() {
         
         final int PROBABILIDAD_VENTANA_ABIERTA = 70;
         final int PROBABILIDAD_LUZ_ENCENDIDA = 60;
