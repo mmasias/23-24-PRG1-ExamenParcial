@@ -1,3 +1,4 @@
+package deCosSaul;
 import java.util.Scanner;
 class ParcialMejorado {
     public static void main(String[] args) {
