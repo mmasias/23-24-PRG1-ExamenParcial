@@ -40,7 +40,7 @@ public class ExamenParcial {
                     columnaRayo = numeroAleatorio(1, 7);
                 }
 
-                imprimeEdificio(consumoHora, dia, hora, plantaMantenimiento, columnaRayo, hayMantenimiento, caeRayo, rayoCaido);
+                imprimeEdificio(consumoHora, dia, hora, plantaMantenimiento, columnaRayo, hayMantenimiento);
                 
                 pause(segundos);
             }
@@ -48,7 +48,7 @@ public class ExamenParcial {
         cleanScreen();
     }
 
-    private static void imprimeEdificio(int consumoHora, int dia, int hora, int plantaMantenimiento, int columnaRayo, boolean hayMantenimiento, boolean caeRayo, boolean yaCaido) {
+    private static void imprimeEdificio(int consumoHora, int dia, int hora, int plantaMantenimiento, int columnaRayo, boolean hayMantenimiento) {
         
         final String ANTENA = " ".repeat(15) + "__/\\__" + " ".repeat(15);
         final String PARARRAYOS = "  |    |    |  |####|  |    |    |  ";
@@ -95,9 +95,7 @@ public class ExamenParcial {
                                 System.out.print(LUZ_APAGADA);
                             }
                         }
-                    
                 }
-                
             }
             System.out.println();
         }
@@ -157,5 +155,4 @@ public class ExamenParcial {
     private static int numeroAleatorio(int minimo, int maximo) {
         return (int) (Math.random() * (maximo - minimo) + minimo);
     }
-
 }
